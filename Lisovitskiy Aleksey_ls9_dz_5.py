@@ -19,3 +19,17 @@ class Pen(Stationery):
 
 b = Pen()
 print(b.draw())
+
+class Pencil(Pen):
+    def draw(self):
+        return 'Рисуем карандашом'
+
+c = Pencil()
+print(c.draw())
+
+class Handmaker(Pencil):
+    def draw(self):
+        return 'Маркер'
+
+d = Handmaker()
+print(d.draw())
