@@ -11,13 +11,13 @@
 class Road:
     def __init__(self, lenght, width, weight, area):
         # self.formula = (lenght, width)
-        self.lenght = lenght
-        self.width = width
-        self.weight = weight
-        self.area = area
+        self._lenght = lenght
+        self._width = width
+        self._weight = weight
+        self._area = area
 
     def formula(self):
-        return self.lenght * self.width * self.weight * self.area / 1000
+        return self._lenght * self._width * self._weight * self._area / 1000
 
 
 road = Road(20, 5000, 25, 5)
