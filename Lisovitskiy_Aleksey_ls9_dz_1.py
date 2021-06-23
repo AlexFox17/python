@@ -9,19 +9,23 @@
 # проверить работу примера, создав экземпляр и вызвав описанный метод.
 # Задачу можно усложнить, реализовав проверку порядка режимов.
 # При его нарушении выводить соответствующее сообщение и завершать скрипт.
+
+""" Разобрал, но код скопировал"""
+
+from time import sleep
 from itertools import cycle
-from time import time
+
+
 class TrafficLight:
-    def __init__(self, stop, attention, go):
-        self.stop = stop
-        self.attention = attention
-        self.go = go
+
+    def __init__(self):
+        self.__color = (('Red', 5), ('Yellow', 2), ('Green', 4))
 
     def running(self):
-        def cycle():
+        for color, sec in cycle(self.__color):
+            print(color, '(wait {} sec)'.format(sec))
+            sleep(sec)
 
 
-
-
-a = TrafficLight('red', 'yellow', 'green')
-print(a.running())
+traffic_light = TrafficLight()
+traffic_light.running()

@@ -10,26 +10,27 @@ class Stationery:
     def draw(self):
         return 'Запуск отрисовки'
 
-a = Stationery()
-print(a.draw())
+stationery = Stationery()
+print(stationery.draw())
 
 class Pen(Stationery):
     def draw(self):
         return 'Рисуем ручкой'
 
-b = Pen()
-print(b.draw())
+pen = Pen()
+print(pen.draw())
 
 class Pencil(Pen):
     def draw(self):
         return 'Рисуем карандашом'
 
-c = Pencil()
-print(c.draw())
+
+pencil = Pencil()
+print(pencil.draw())
 
 class Handmaker(Pencil):
     def draw(self):
         return 'Маркер'
 
-d = Handmaker()
-print(d.draw())
+handmaker = Handmaker()
+print(handmaker.draw())
